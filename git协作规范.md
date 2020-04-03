@@ -1,29 +1,39 @@
-###命名规则
+#### 命名规则
+
 - 版本号 + 功能名称
 - 功能名称尽量( 非强制 )少于 3 个单词描述, 单词之间用下划线 `_ ` 分割
 
-###示例
 ```
 feature/1.0.0_version_update
 bugfix/1.0.0_match_ui
 ```
 
-#### master 分支
+#### 分支说明
+
+**master**
+
 主分支, 用于发布到生产环境的代码, 不能在这个分支上面直接提交修改
 
-#### develop 分支
+**develop**
+
 开发主分支,  主要合并 `feature` 、 `bugfix` 、  `release`  分支
 
-#### release 分支
+**release**
+
 `feature` 分支开发完毕, 合入 `develop` 分支, 基于 `develop` 分支创建一个新的 `release` 分支, 用于提测, 这个阶段所有的 bug 修复都合并到这个分支,  测试完毕后重新合入 `develop` 和 `master`
 
-#### feature 分支
+**feature**
+
 根据需求划分功能点创建的分支,  尽可能保证一个需求点一个分支 （!!#ff9900 非强制!!）
 
-#### bugfix 分支
+**bugfix**
+
 提测期间 bug 修改所在的分支、或者线上 bug 修复
 
-#### merge request
+
+
+#### 合并
+
 `feature` 分支开发完毕后, 在 gitlab 网页端发起 merge request 合入 `develop` 分支,  并 @ 1~2个小伙伴 review 代码, 有问题及时修改, 重复上述工作直至没有问题再合入
 
 #### 提交记录格式
